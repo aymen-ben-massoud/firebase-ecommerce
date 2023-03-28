@@ -1,0 +1,29 @@
+
+<div class="container-fluid">
+ 
+  <div class="row justify-content-center">
+ 
+    <div class="bestsellers"><h1>
+      <b>Your </b>  Orders
+      </h1></div>
+<div class="col-auto"  *ngFor="let item of order ; index as i " class="card text-center p-2 m-2">
+  <h5 class="card-title">{{  item.sendoreders[0].name }}</h5>
+  <p>{{  item.date }}</p>
+  <p class="card-text">{{  item.sendoreders[0].adress }} <br> {{  item.sendoreders[0].tel }} </p>
+  <img src="{{item.setproduct[0].img}}" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{item.setproduct[0].amount}}</h5>
+    <h5 class="card-title">{{item.setproduct[0].price |currency}}</h5>
+ <hr>
+    <div class="card-body">
+      <img src="{{item.setproduct[1].img}}" class="card-img-top" >
+      <h5 class="card-title">{{item.setproduct[1].amount}}</h5>
+      <h5 class="card-title">{{item.setproduct[1].price |currency}}</h5>
+
+
+  </div>
+  
+
+</div>
+<button href="#" class="btn btn-outline-danger " (click)="delete(i)">delete</button></div></div>
+</div>

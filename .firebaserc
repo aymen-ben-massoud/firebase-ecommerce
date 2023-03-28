@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "addtocart-c49b8": {
+      "hosting": {
+        "add-to-cart": [
+          "addtocart-c49b8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "addtocart-c49b8"
+  }
+}

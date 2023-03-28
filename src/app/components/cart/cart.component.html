@@ -1,0 +1,178 @@
+
+<div class="cart-data" *ngIf="cart.length != 0" >
+
+<table class="table " >
+  <thead>
+    <tr class="title"  >
+ 
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+      <th scope="col">value</th>
+      <th scope="col">Price</th>
+      
+    
+      
+      <th>
+        <button class="btn btn-outline-dark" (click)="clearall()"><i class="fa-solid fa-x"></i></button>
+      </th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr  class="tr" *ngFor="let item of cart; index as i">
+     
+
+      <td><img class="imageproduct" src="{{ item.img }}" alt="..." /></td>
+      <td class="name" >{{ item.name }}</td>
+
+      <td  > <button class="btn btn-outline-dark" min="1" (click)="mins(i)"><i class="fa-solid fa-minus"></i></button
+        >
+        <input   class="  amonutinput" min="1" [(ngModel)]="item.amount" type="number" />
+       
+        <button class="btn btn-outline-dark" max="10" (click)="plus(i)"><i class="fa-solid fa-plus"></i></button></td>
+      <td class="price">{{ item.price! * item.amount! | currency }}  </td>
+      <td>
+        <button (click)="delete(item)" class="btn btn-outline-danger">
+          <i class="fa fa-trash" aria-hidden="true"></i>                                                       
+        </button>
+      </td>
+      <td>
+        
+      </td>
+      <!-- <td   (click)="getotal()">jj</td> -->
+    </tr>
+   
+  </tbody>
+ 
+
+</table>
+<div class="fororder">
+<div class="thetotal" > <p >total: </p> <h1  >{{ total | currency}}</h1></div>
+<button
+type="button"
+class="btn btn-outline-success ordernow"
+data-bs-toggle="modal"
+data-bs-target="#exampleModal"
+
+>
+order now <i class="fa-solid fa-truck"></i>
+</button></div>
+</div>
+<div>
+ 
+  <!-- the  model -->
+
+
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog  ">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <h5 class="modal-title" id="exampleModalLabel">send order</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div class="modal-footer ">
+          <form #f="ngForm"   >
+            <div class="form-group ">
+              <label for="exampleInputEmail1">name</label>
+              <input
+              placeholder="Mohamed"
+                type="text"
+                class="form-control"
+                ngModel
+                #name="ngModel"
+                required
+                name="name"
+              />
+
+              <div
+                class="alert alert-danger"
+                *ngIf="name.touched && name.invalid"
+              >
+                name is required
+              </div>
+
+              <label for="exampleInputEmail1">adress</label>
+              <input
+                type="text"
+                class="form-control"
+                ngModel
+                #adress="ngModel"
+                required
+                name="adress"
+                placeholder="tunisia"
+              />
+
+              <div
+                class="alert alert-danger"
+                *ngIf="adress.touched && adress.invalid"
+              >
+                adress is required
+              </div> 
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputPassword1">tel</label>
+              <input
+                type="number"
+                class="form-control"
+                ngModel
+                #tel="ngModel"
+                required
+                name="tel"
+                placeholder="+216 99 999 999"
+              />
+              <div
+                class="alert alert-danger"
+                *ngIf="tel.touched && tel.errors?.['required']"
+              >
+                tel is required
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-outline-success sendorder m-3"
+              [disabled]="f.invalid"
+
+              (click)="login(f)"
+              (click)="sendorders()"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              
+            >
+
+
+
+
+             send  <i class="fa-solid fa-check"></i>
+            </button>
+      
+          </form>
+         
+        </div>
+       
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="empty-cart"  *ngIf="!cart || cart.length == 0 ">
+  <h1>add product</h1>
+  <i class="fa-solid fa-cart-plus"></i>
+
+</div>

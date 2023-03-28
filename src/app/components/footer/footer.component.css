@@ -1,0 +1,71 @@
+
+.logo{
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Kalam', cursive;
+    text-transform: uppercase;
+    margin: 20px;
+}
+.logo:hover{
+    color:  rgb(201, 83, 83)!important;
+    transition: 0.3s!important;
+}
+
+.logo >  b {
+    color: rgb(201, 83, 83);
+
+}
+footer{
+padding: 40px;
+background-color: rgba(248,249,250,255);
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+height: max-content;
+}
+.divlogo >h6{
+font-weight: 250;
+width: 300px;
+
+}
+ i {
+    font-size: 25px;
+    margin: 10px;
+    color: rgb(107, 106, 106);
+}
+ i:hover{
+    color: rgb(20, 20, 20);  
+    transition: 0.5s ease;
+}
+
+.secondfooter > h1{
+
+   font-size: 22px; 
+ 
+}
+.secondfooter >h4{
+font-size: 15px;
+    font-weight: 300;
+}
+.theendtext{
+color: rgb(68, 68, 68);
+    background-color: rgba(248,249,250,255);
+   font-size: 10px;
+   padding: 20px;
+   font-weight: 300;
+    text-align: center;
+    
+    border-top: 0.5px solid rgb(219, 219, 219);
+}
+@media screen and (max-width: 500px){
+   
+    .enddiv{
+        
+        height: 300px;
+        background-color: rgba(248,249,250,255);
+        
+        }  
+    }

@@ -1,0 +1,77 @@
+.col > h1{
+
+
+    
+    font-weight: 400;
+    line-height: 2;
+    color: rgb(201, 83, 83);
+    letter-spacing: 5px;
+    font-family: 'Kalam', cursive;
+    padding: 10px;
+   
+}
+.col{
+    text-align: center;
+}
+.col > p {
+    color: rgba(161,161,162,255);
+    font-size: 15px;
+}
+.iframe{
+    width:50vw!important;
+    height: 50vh!important;
+}
+
+.logo{
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Kalam', cursive;
+    text-transform: uppercase;
+    margin: 20px;
+}
+.logo:hover{
+    color:  rgb(201, 83, 83)!important;
+    transition: 0.3s!important;
+}
+
+.logo >  b {
+    color: rgb(201, 83, 83);
+
+}
+
+.divlogo >h6{
+font-weight: 250;
+
+
+}
+.divlogo{
+    margin: 60px   0;
+}
+
+i {
+    font-size: 25px;
+    margin: 10px;
+   
+    color: rgb(20, 20, 20);  
+}
+ i:hover{
+    color: rgb(107, 106, 106);
+    transition: 0.5s ease;
+}
+.secondfooter{
+    margin: 60px   0;
+   
+   
+   
+   }
+   .secondfooter > h1{
+   
+      font-size: 22px; 
+    
+   }
+   .secondfooter >h4{
+   font-size: 15px;
+       font-weight: 300;
+   }

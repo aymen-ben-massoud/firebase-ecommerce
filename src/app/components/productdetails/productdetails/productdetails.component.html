@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row m-3 align-items-center">
+        <div class="col-md-6 col-12">
+            <img src="{{getproduct.img}}" alt="">
+</div>
+<div class="col-md-6 col-12 text">
+    <div><p>Name of product :</p>  <h1>{{getproduct.name}}</h1></div>
+    <div  >  <p>Price of product :</p>    <h1>{{getproduct.price}}$</h1></div>
+  
+  
+    <button class="buybutton"     [ngStyle] = "{
+        'border-top': buy2   ?  '0.2px solid lightgreen':  '0.2px solid rgb(241, 58, 58)',
+        'color' : buy2 ? 'lightgreen'  : 'rgb(241, 58, 58)',
+        'pointer-events' :  buy2 ? 'none' :'auto'
+      }" (click)="buy()" >{{BUY}}</button>
+
+</div>
+
+</div>
+</div>
+
+

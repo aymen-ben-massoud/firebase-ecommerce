@@ -1,0 +1,92 @@
+
+<div class="container">
+  <div class="row justify-content-center "><div class="col">
+
+
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+  add product
+ </button>
+ 
+ <!-- Modal -->
+
+<table class="table p-2 m-2">
+
+    <thead>
+      <tr>
+        <th scope="col">name</th>
+        <th scope="col">price</th>
+        <th scope="col">update</th>
+        <th scope="col">delete</th>
+      </tr>
+    </thead> 
+    <tbody>
+      <tr *ngFor="let item of productlist; index as i">
+        <td><input class="form-control" type="text"  [(ngModel)]="item.name" value="{{ item.name }}" name="" id=""></td>
+        <td> <input type="number" [(ngModel)]="item.price" value="{{ item.price | currency }}" class="form-control"></td>
+        <td><button (click)="changeprice(i)" class="btn btn-outline-primary"><i class="fa fa-save" aria-hidden="true"></i></button></td>
+        <td><button (click)="deletep(i)" class="btn btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">add product</h5>
+    
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+     
+      <div class="modal-footer">
+      
+        <form #f="ngForm" (ngSubmit)="addproductform(f )" >
+        
+          <div class="form-group">
+          <label for="exampleInputEmail1">category</label>
+          <input placeholder="one" type="text" class="form-control" ngModel  #category="ngModel" required name="category">
+
+         <div class="alert alert-danger" *ngIf="category.touched && category.invalid"> category required</div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">amount</label>
+          <input type="number" placeholder="always 1" class="form-control" ngModel  #amount="ngModel" required name="amount">
+
+         <div class="alert alert-danger" *ngIf="amount.touched && amount.invalid"> amount required</div>
+        </div>
+       
+        <div class="form-group">
+          <label for="exampleInputEmail2">name</label>
+          <input type="text" class="form-control" placeholder="shoes" ngModel  #name="ngModel" required name="name">
+
+         <div class="alert alert-danger" *ngIf="name.touched && name.invalid"> name required</div>
+        </div>
+       
+
+        <div class="form-group">
+          <label for="exampleInputEmail3">price</label>
+          <input type="number" class="form-control" ngModel placeholder="99" #price="ngModel" required name="price">
+
+         <div class="alert alert-danger" *ngIf="price.touched && price.invalid"> price required</div>
+        </div>
+       
+    
+          <div class="form-group">
+            <label for="exampleInputPassword1"  >file</label>
+            <input type="file" class="form-control" #file="ngModel" required name="file"ngModel required #image >
+          </div>
+           <div class="alert alert-danger" *ngIf="file.touched && file.invalid"> file required</div>
+    
+       
+          <button type="submit" class="btn btn-outline-success m-3"    [disabled]="f.invalid">add product</button>
+       
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div>

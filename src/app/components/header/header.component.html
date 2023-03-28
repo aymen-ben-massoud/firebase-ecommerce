@@ -1,0 +1,102 @@
+<nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+     
+ <a class="navbar-brand logo">mini <b> shope</b></a>
+ <a class="navbar-brand formobile"  routerLinkActive="active" *ngIf="!isuser" routerLink="/cart" ><i class="fa-solid fa-cart-shopping"></i><span class="badge">  {{local.cartCount}}   </span>   </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+   
+      <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+     
+          <li class="nav-item"  >
+            <a class="nav-link " routerLinkActive="active" routerLink="/product" aria-current="page"   >Home</a>
+          </li>
+          <li class="nav-item"  *ngIf="isuser">
+            <a  routerLink="/settings" routerLinkActive="active"   class="nav-link active" aria-current="page" >
+              settings
+            </a>
+          </li>
+          <li class="nav-item"  *ngIf="isuser">
+            <a class="nav-link "  routerLinkActive="active"  routerLink="/orders" aria-current="page" >orders</a>
+          </li>
+          <li class="nav-item  dropdown"  >
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" *ngIf="!isuser"   href="#">Shope</a>
+        
+            <div   class="dropdown-menu">
+           
+              <a class="dropdown-item"  routerLinkActive="active" routerLink="/category1"  >category1</a>
+              <a class="dropdown-item" routerLinkActive="active" routerLink="/category2"  >category2</a>
+              <a class="dropdown-item"  routerLinkActive="active" routerLink="/category3"  >category3</a>
+          
+            </div>
+          </li>
+          <li class="nav-item"  >
+            <a class="nav-link" *ngIf="!isuser"   routerLinkActive="active" routerLink="/contact" >Contact</a>
+          </li>
+          <li class="nav-item"  >
+
+          </li>
+        
+          <li *ngIf="isuser" class="nav-item logout " (click)="logout()">
+            <a class="btn btn-danger  logout"  >logout </a>
+          </li>
+        </ul>
+        <a class="navbar-brand fordesktop" *ngIf="!isuser"  routerLinkActive="active" routerLink="/cart" ><i class="fa-solid fa-cart-shopping"></i><span class="badge">{{local.cartCount}}   </span>   </a>
+      <form class="form-inline    ">
+        <input  (keypress)="filter()" [(ngModel)]="search"  [ngModelOptions]="{standalone: true}" class="form-control searchinput" type="text" placeholder="Search" aria-label="Search">
+      
+      
+       
+        <div class="thetextofsearch1"  *ngIf="filtering">
+          <h6 class="out">  <i  (click)="out()"  class="fa fa-times"></i></h6> 
+        <div class="thetextofsearch" *ngFor="let item of product | filter:search "   >
+          
+         <h6 class="item"  routerLinkActive="active" routerLink="/details/{{item.id}}" >{{item.name}}</h6>   
+        </div> 
+        </div>
+      </form>
+   </div>
+    </div>
+  </nav> 
+  
+
+<!-- 
+<nav>
+
+<ul>
+
+<li class="logo"><a >Mini<p>Shope</p> </a></li>
+
+
+<div class="divanimation">
+
+  <li><a >Home</a></li>
+  <li><a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Shope</a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">All</a>
+    <a class="dropdown-item" href="#">Women's</a>
+    <a class="dropdown-item" href="#">Men's</a>
+    <a class="dropdown-item" href="#">Kids</a>
+
+  </div>
+</li>
+ 
+  <li  ><a >Contact</a></li>
+</div>
+
+<div class="searchdiv">
+
+  <li><a ><i class="fa-solid fa-cart-shopping"></i></a></li>
+  <li class="lisearch"> <input class="form-control searchinput" type="search" placeholder="Search" aria-label="Search" ></li>
+  <li></li>
+</div>
+<div class="menubars" ><i class="fa-solid fa-bars"></i></div>
+</ul>
+
+
+ 
+</nav>
+ -->

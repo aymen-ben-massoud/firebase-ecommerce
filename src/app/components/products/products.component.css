@@ -1,0 +1,327 @@
+.carousel-item > img {
+    height: 500px;
+    opacity: 0.8;
+   
+}
+.text-center {
+    position: absolute;
+    margin: 0;
+  
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    z-index: 100;
+  }
+
+  .text-center h1:first-child{
+   
+    font-weight: 400;
+    line-height: 2;
+    color: rgb(201, 83, 83);
+    letter-spacing: 5px;
+    font-family: 'Kalam', cursive;
+    padding: 10px;
+    box-shadow:  1px 2px 10px #5f6163;
+  }
+  .secondchild{
+
+    opacity: 0.8;
+    font-weight: 400;
+    line-height: 2;
+    color: #fff;
+    letter-spacing: 5px;
+    font-family: 'Kalam', cursive;
+    padding: 10px;
+    box-shadow:  1px 2px 10px #5f6163;
+background-color: rgb(201, 83, 83);
+  }
+
+  .text-center h1:first-child:hover{
+    color: #fff;
+    background-color:rgb(201, 83, 83) ; 
+    opacity: 0.8;
+    transition: 0.8s;
+    
+  }
+  .secondchild:hover{
+    color: rgb(201, 83, 83);
+    background-color: unset ; 
+    transition: 0.8s;
+  }
+
+
+  .services {
+display: flex;
+padding: 20px;
+margin: 5px;
+
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+border-radius: 30px;
+  width: 400px;
+  margin-top: 30px;
+  margin: 20px;
+  }
+  .services:hover {
+    
+ 
+    box-shadow: unset;
+    transition: 0.5s ease-in-out;
+   
+      }
+  .services > div > i{
+    padding: 15px;
+    border-radius: 100px;
+    border: 2px solid rgb(201, 83, 83);
+    font-size: 25px;
+    color: rgb(201, 83, 83);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+  }
+  .services > div > h1{
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #212529;
+ font-size: 25px;
+   padding: 0px;
+   margin: 0px;
+ font-style: italic;
+   
+  }
+  .services > div > p{
+    color:rgb(201, 83, 83) ;
+    font-style: italic;
+  }
+  .textservices{
+    padding-left:10px ;
+  }
+  .homeimagediscount {
+    position: relative;
+  }
+.homeimagediscount >h1{
+
+position: absolute;
+z-index: 100;
+ font-size: 50px;
+ font-weight: 600;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+text-transform: uppercase;
+color: #fff;
+font-style: italic;
+
+text-shadow: 2px 5px  rgb(201, 83, 83)  ;
+
+}
+.videoshipping{
+  margin-top: 2px;
+  width:430px ; 
+  height: 250px;
+
+}
+.homeimagediscount >  img{
+
+  width:430px ;
+  height:250px
+}
+.divservices{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.bestsellers{
+margin: 50px;
+
+}
+.bestsellers > h1 > b {
+  border-bottom: 5px solid rgb(241, 58, 58);
+}
+.bestsellers > h1{
+
+text-transform: uppercase;
+font-weight: 400;
+letter-spacing: 3px;
+color: #212529;
+font-style: italic;
+}
+.card{
+  width: 250px;
+  height: 450px;
+  margin: 20px 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.card > img{
+  height: 350px!important;
+}
+.card > img:hover{
+  opacity: 0.9;
+}
+
+.buybutton{
+width: 240px;
+height: 40px;
+background-color: #fff;
+color: rgb(241, 58, 58);
+border: unset;
+border-top: 0.2px solid rgb(241, 58, 58);
+
+letter-spacing: 5px;
+    font-family: 'Kalam', cursive; 
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+top: 95%;
+transform: translate(-50%, -50%);
+
+}
+.buybutton:hover{
+  border-top: 1px solid rgb(241, 58, 58);
+
+  letter-spacing: 7px;
+  font-weight: 600;
+  transition: 0.6s;
+
+
+
+}
+.textofcard{
+
+ 
+  height: 50px;
+ 
+  text-align: center;
+}
+
+.card-title{
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+.card-text{
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-family: 'Kalam', cursive;
+  position: absolute;
+  left: 50%;
+top: 87%;
+transform: translate(-50%, -50%);
+}
+
+.card-title > div > i {
+font-size: 5px;
+  margin: 0px;
+  padding: 0px;
+
+}
+.photos{
+  margin-top: 130px;
+
+ 
+}
+.photos > div > img {
+width:40vw ;
+}
+.photos > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+flex-wrap: wrap;
+}
+.textphotos {
+  width: 40vw;
+  padding-left: 20px;
+ 
+}
+.textphotos > h1{
+font-weight: 400;
+}
+.textphotos > p {
+  color: rgba(161,161,162,255);
+}
+.Shope{
+  margin: 10px 0;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ 
+  font-family: 'Kalam', cursive;
+  padding: 10px 20px;
+}
+.lastdiv{
+  text-align: center;
+  margin: 190px;
+  
+}
+.lastdiv > p {
+  color: rgba(161,161,162,255); 
+}
+@media screen and (max-width: 700px) {
+  .photos > div > img {
+    width:90vw ;
+    }
+    .textphotos {
+      width: 90vw;
+      padding-left: 20px;
+     
+    }
+  .services {
+    display: flex;
+    padding: 15px;
+    margin: 5px;
+   
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 30px;
+      width: 400px;
+      margin-top: 10px;
+      margin: 10px;
+      }
+  .videoshipping{
+    width:400px ;
+
+  
+  }
+ 
+  .homeimagediscount >  img{
+
+    width:400px ;
+    height:250px
+  }
+  
+    .text-center {
+       
+      width:300px;
+ 
+      }
+    .carousel-item > img {
+        height: 400px;
+    }
+    .text-center h1:first-child{
+   
+        font-size: 20px;
+        
+      }
+      .secondchild{
+        font-size: 20px;
+      }
+    }
+    @media screen and (max-width: 500px){
+      .videoshipping{
+        width:350px ;
+    
+      
+      }
+      .lastdiv{
+      
+        margin: 30px;
+        
+      }
+   
+      .homeimagediscount >  img{
+    
+        width:350px ;
+        height:250px
+      }
+      
+    }

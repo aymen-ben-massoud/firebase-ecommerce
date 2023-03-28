@@ -1,0 +1,45 @@
+
+@media screen and (max-width: 700px) {}
+
+
+.card{
+width: 200px;
+text-transform: uppercase;
+
+line-height: 1.5;
+color: #212529;
+letter-spacing: 1px;
+font-family: 'Kalam', cursive;
+border-radius: 15px; 
+
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.orders{
+
+    text-transform:capitalize;
+
+line-height: 1.5;
+color: #212529;
+letter-spacing: 1px;
+font-family: 'Kalam', cursive;
+border-radius: 15px; 
+font-weight: 600;
+
+}
+
+
+.bestsellers{
+    margin: 50px;
+    
+    }
+    .bestsellers > h1 > b {
+      border-bottom: 5px solid rgb(241, 58, 58);
+    }
+    .bestsellers > h1{
+    
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #212529;
+    font-style: italic;
+    }
